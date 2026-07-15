@@ -12,4 +12,8 @@ urlpatterns = [
         "accounts/",
         include("accounts.urls")
     ),
+    path(
+        "kundli/",
+        include("kundli.urls")
+    ),
 ]
