@@ -1,6 +1,11 @@
 import swisseph as swe
 from datetime import datetime
 
+from panchang.constants import (
+    TITHIS,
+    NAKSHATRAS
+)
+from panchang.utils import normalize_angle
 
 class PanchangEngine:
 
@@ -30,5 +35,57 @@ class PanchangEngine:
             dt.day,
             dt.hour + dt.minute / 60
         )
-
         return jd
+    
+    def get_moon_longitude(self):
+
+        jd = self.get_julian_day()
+
+        moon_position = swe.calc_ut(
+                jd,
+                swe.MOON
+            )
+
+        longitude = moon_position[0][0]
+
+        return longitude
+    
+    def get_nakshatra(self):
+
+        moon_longitude = self.get_moon_longitude()
+
+        nakshatra_index = int(
+            moon_longitude // (360 / 27)
+        )
+
+        return NAKSHATRAS[nakshatra_index]
+    
+    def get_sun_longitude(self):
+
+        jd = self.get_julian_day()
+
+        sun_position = swe.calc_ut(
+            jd,
+            swe.SUN
+        )
+
+        longitude = sun_position[0][0]
+
+        return longitude
+    def get_tithi(self):
+
+        moon_longitude = self.get_moon_longitude()
+
+        sun_longitude = self.get_sun_longitude()
+
+        difference = normalize_angle(
+            moon_longitude - sun_longitude
+        )
+
+        tithi_index = int(
+            difference // 12
+        )
+
+        return TITHIS[tithi_index]
+
+        
