@@ -3,7 +3,9 @@ from datetime import datetime
 
 from panchang.constants import (
     TITHIS,
-    NAKSHATRAS
+    NAKSHATRAS,
+    YOGAS,
+    KARANAS
 )
 from panchang.utils import normalize_angle
 
@@ -87,5 +89,35 @@ class PanchangEngine:
         )
 
         return TITHIS[tithi_index]
+    
+    def get_yoga(self):
+
+        moon_longitude = self.get_moon_longitude()
+
+        sun_longitude = self.get_sun_longitude()
+
+        total = (moon_longitude + sun_longitude) % 360
+
+        yoga_index = int(
+            total // (360 / 27)
+        )
+
+        return YOGAS[yoga_index]
+    
+    def get_karana(self):
+
+        moon_longitude = self.get_moon_longitude()
+
+        sun_longitude = self.get_sun_longitude()
+
+        difference = (
+            moon_longitude - sun_longitude
+        ) % 360
+
+        karana_index = int(
+            difference // 6
+        )
+
+        return KARANAS[karana_index]
 
         
