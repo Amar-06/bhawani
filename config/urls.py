@@ -16,4 +16,8 @@ urlpatterns = [
         "kundli/",
         include("kundli.urls")
     ),
+    path(
+        "panchang/",
+        include("panchang.urls")
+    ),
 ]

@@ -40,7 +40,10 @@ def create_birth_details(request):
 
             birth_details.save()
 
-            return redirect("birth_details")
+            return redirect(
+                "panchang",
+                birth_detail_id=birth_details.id
+            )
 
     else:
 

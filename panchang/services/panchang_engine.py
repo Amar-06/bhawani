@@ -117,6 +117,8 @@ class PanchangEngine:
         karana_index = int(
             difference // 6
         )
+        if karana_index >= len(KARANAS):
+                karana_index = karana_index % len(KARANAS)
 
         return KARANAS[karana_index]
 
