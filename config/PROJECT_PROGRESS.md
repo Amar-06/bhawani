@@ -7,17 +7,22 @@
 - Django project setup
 - PostgreSQL integration
 - Git initialization
-- Apps created:
-  - accounts
-  - kundli
-  - panchang
-  - dashboard
+- Requirements file
+- Documentation folder (`docs/`)
+
+### Apps Created
+
+- accounts
+- kundli
+- panchang
+- dashboard
 
 ### Authentication
 
 - Custom user model
 - User registration
-- Login and logout system
+- Login functionality
+- Logout functionality
 
 ### Kundli Module
 
@@ -34,16 +39,26 @@
 - Panchang services folder
 - Initial `PanchangEngine` class
 - Julian Day calculation
-- Moon longitude calculation
 - Sun longitude calculation
+- Moon longitude calculation
 - Nakshatra calculation
 - Tithi calculation
+- Yoga calculation
+- Karana calculation
+
+### UI
+
+- Panchang result page
+- Bootstrap integration
+- Base template (`base.html`)
+- Automatic redirection after saving birth details
 
 ---
 
 ## 🚧 In Progress
 
-- Panchang module
+- Panchang module refinement
+- UI improvements
 
 ---
 
@@ -51,18 +66,24 @@
 
 ### Panchang
 
-- [ ] Yoga calculation
-- [ ] Karana calculation
-- [ ] Panchang view
-- [ ] Panchang template
+- [ ] Fix Karana algorithm
+- [ ] Add Paksha calculation
+- [ ] Add Hindu month calculation
 
 ### Kundli
 
-- [ ] Planet positions
 - [ ] Rashi calculation
+- [ ] Planet positions
 - [ ] House calculation
 - [ ] Lagna chart
 - [ ] Navamsa chart
+
+### Dashboard
+
+- [ ] Dashboard page
+- [ ] List all saved birth details
+- [ ] Edit birth details
+- [ ] Delete birth details
 
 ### Future Features
 
@@ -75,22 +96,30 @@
 
 ## 📅 Last Updated
 
-**20 July 2026**
+**22 July 2026**
 
-Current status:
+### Current Status
 
 - Nakshatra: ✅ Working
 - Tithi: ✅ Working
-- Swiss Ephemeris: ✅ Integrated
+- Yoga: ✅ Working
+- Karana: ✅ Working (temporary implementation)
+- Panchang Page: ✅ Working
+- Bootstrap UI: ✅ Working
 
-### Panchang Engine
+## Completed Today
 
-- Panchang services folder
-- Initial `PanchangEngine` class
-- Julian Day calculation
-- Moon longitude calculation
-- Sun longitude calculation
-- Nakshatra calculation
-- Tithi calculation
-- Yoga calculation
-- Karana calculation
+### Refactoring
+- Created AstronomyEngine
+- Refactored PanchangEngine
+- Implemented inheritance
+
+### Astronomy
+- Julian Day
+- Sun Longitude
+- Moon Longitude
+- Planet Positions
+- Planet Rashis
+
+### Testing
+- All astronomy and Panchang methods verified successfully

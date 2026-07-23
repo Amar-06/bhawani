@@ -1,3 +1,4 @@
+import swisseph as swe
 TITHIS = [
     "Pratipada",
     "Dwitiya",
@@ -121,4 +122,30 @@ KARANAS = [
     "Chatushpada",
     "Naga",
     "Kimstughna",
+]
+
+PLANETS = {
+    "Sun": swe.SUN,
+    "Moon": swe.MOON,
+    "Mars": swe.MARS,
+    "Mercury": swe.MERCURY,
+    "Jupiter": swe.JUPITER,
+    "Venus": swe.VENUS,
+    "Saturn": swe.SATURN,
+    "Rahu": swe.MEAN_NODE,
+}
+
+RASHIS = [
+    "Mesha (Aries)",
+    "Vrishabha (Taurus)",
+    "Mithuna (Gemini)",
+    "Karka (Cancer)",
+    "Simha (Leo)",
+    "Kanya (Virgo)",
+    "Tula (Libra)",
+    "Vrischika (Scorpio)",
+    "Dhanu (Sagittarius)",
+    "Makara (Capricorn)",
+    "Kumbha (Aquarius)",
+    "Meena (Pisces)",
 ]
