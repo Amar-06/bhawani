@@ -149,3 +149,18 @@ RASHIS = [
     "Kumbha (Aquarius)",
     "Meena (Pisces)",
 ]
+
+HOUSES = [
+    "1st House",
+    "2nd House",
+    "3rd House",
+    "4th House",
+    "5th House",
+    "6th House",
+    "7th House",
+    "8th House",
+    "9th House",
+    "10th House",
+    "11th House",
+    "12th House",
+]

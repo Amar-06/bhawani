@@ -1,5 +1,17 @@
 # Bhawani Progress
 
+from panchang.services.kundli_engine import KundliEngine
+from datetime import date, time
+
+engine = KundliEngine(
+    date(2005, 8, 6),
+    time(10, 30),
+    22.8046,
+    86.2029
+)
+
+print(engine.get_planet_positions())
+
 ## ✅ Completed
 
 ### Project Setup
